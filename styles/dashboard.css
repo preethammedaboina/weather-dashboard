@@ -1,0 +1,75 @@
+/* General container styling */
+.dashboard-container {
+    display: flex;
+    max-width: 100%; /* Ensures it takes full width */
+    width: 100%;
+    gap: 10px; /* Decrease space between sidebar and main content */
+    padding: 0 10px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixes the sidebar on the left */
+    overflow-y: auto;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 240px; /* Offset to account for fixed sidebar width */
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* Weather card styling */
+.weather-card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    margin-bottom: 20px; /* Adds space between cards */
+    background: linear-gradient(to top, #d7d2cc, #304352); /* Example gradient */
+    transition: background 0.5s ease-in-out;
+}
+
+/* Forecast item styling */
+.forecast-item {
+    background-color: #fff;
+    color: #000;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin: 5px; /* Adds space between forecast items */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Stack sidebar and main content vertically */
+    .dashboard-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Smaller padding for weather cards */
+    .weather-card {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}
